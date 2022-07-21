@@ -1,0 +1,45 @@
+-   name: 关键字为空列出客户列表
+    params:
+        action: list_customer
+        pagesize: 10
+        pagenum: 1
+        keywords: ""
+    e: {'ret': 0,'retlist': [],"total": 0}
+    codeNo: 200
+-   name: pagenum为不合法字符出客户列表
+    params:
+        action: list_customer
+        pagesize: 10
+        pagenum: hello
+        keywords: ""
+    e: {'ret': 1,'msg': '请求参数错误'}
+    codeNo: 200
+-   name: pagesize为不合法字符出客户列表
+    params:
+        action: list_customer
+        pagesize: hello
+        pagenum: 1
+        keywords: ""
+    e: {'ret': 1,'msg': '请求参数错误'}
+    codeNo: 200
+-   name: pagenum字段缺失时出客户列表
+    params:
+        action: list_customer
+        pagesize: 10
+        keywords: ""
+    e: {'ret': 1,'msg': '请求参数错误'}
+    codeNo: 200
+-   name: pagesize字段缺失时出客户列表
+    params:
+        action: list_customer
+        pagenum: 1
+        keywords: ""
+    e: {'ret': 1,'msg': '请求参数错误'}
+    codeNo: 200
+-   name: keywords字段缺失时出客户列表
+    params:
+        action: list_customer
+        pagesize: 10
+        pagenum: 1
+    e: {'ret': 1,'msg': '请求参数错误'}
+    codeNo: 200

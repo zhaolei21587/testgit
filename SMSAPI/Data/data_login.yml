@@ -1,0 +1,43 @@
+-   name: 正确用户登录
+    caseid: SMS_-16
+    params:
+        username: byhy
+        password: 88888888
+    e: {'ret': 10}
+    codeNo: 200
+-   name: 错误的密码登录
+    caseid: SMS_-17
+    params:
+        username: byhy
+        password: 88777888
+    e: {'ret': 1, 'msg': '用户名或者密码错误'}
+    codeNo: 200
+-   name: 用户名为空登录
+    caseid: SMS_-18
+    params:
+        username:
+        password: 88888888
+    e: {'ret': 1, 'msg': '用户名或者密码错误'}
+    codeNo: 200
+-   name: 密码为空登录
+    caseid: SMS_-19
+    params:
+        username: byhy
+    e: {"ret": 1, "msg": "用户名或者密码错误"}
+    codeNo: 200
+-   name: 输入两次密码登录登录
+    caseid: SMS_-20
+    params:
+        username: byhy
+        password: 88888888
+        password: 88888888
+    e: {"ret": 0}
+    codeNo: 200
+-   name: 输入两次用户名登录
+    caseid: SMS_-21
+    params:
+        username: byhy
+        username: byhy
+        password: 88888888
+    e: {"ret": 0}
+    codeNo: 200

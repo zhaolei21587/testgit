@@ -1,0 +1,24 @@
+-   name: 有10个客户时出客户列表
+    params:
+        action: list_customer
+        pagesize: 10
+        pagenum: 1
+        keywords: ""
+    e: {'ret': 0, 'retlist': [{'id': 31, 'name': '南京中医院3', 'phonenumber': '2551867853', 'address': '江苏省-南京市-秦淮区-汉中路-503'}, {'id': 30, 'name': '南京中医院2', 'phonenumber': '2551867852', 'address': '江苏省-南京市-秦淮区-汉中路-502'}, {'id': 29, 'name': '南京中医院1', 'phonenumber': '2551867851', 'address': '江苏省-南京市-秦淮区-汉中路-501'}], 'total': 3}
+    codeNo: 200
+-   name: 10个客户，每页10个客户，列出第二页的客户
+    params:
+        action: list_customer
+        pagesize: 10
+        pagenum: 2
+        keywords: ""
+    e: {'ret': 0, 'retlist': [], 'total': 0}
+    codeNo: 200
+-   name: 10个客户，每页5个客户，列出第二页的客户
+    params:
+        action: list_customer
+        pagesize: 5
+        pagenum: 2
+        keywords: ""
+    e: [{'name': '武汉市桥西医院_11', 'phonenumber': '13345679934', 'address': '武汉市桥西医院北路_4'},{'name': '武汉市桥西医院_11', 'phonenumber': '13345679934', 'address': '武汉市桥西医院北路_4'}, {'name': '武汉市桥西医院_3', 'phonenumber': '13345679933', 'address': '武汉市桥西医院北路_3'}, {'name': '武汉市桥西医院_2', 'phonenumber': '13345679932', 'address': '武汉市桥西医院北路_2'}, {'name': '武汉市桥西医院_1', 'phonenumber': '13345679931', 'address': '武汉市桥西医院北路_1'}, {'name': '武汉市桥西医院_0', 'phonenumber': '13345679930', 'address': '武汉市桥西医院北路_0'}]
+    codeNo: 200

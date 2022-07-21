@@ -1,0 +1,4 @@
+INFO     root:test_login.py:17 SMS_-16：正确用户登录
+INFO     root:test_login.py:23 连接allure，生成报告
+DEBUG    urllib3.connectionpool:connectionpool.py:227 Starting new HTTP connection (1): 127.0.0.1:80
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://127.0.0.1:80 "POST /api/mgr/signin HTTP/1.1" 200 10
